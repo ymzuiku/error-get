@@ -9,7 +9,7 @@ $ npm install error-get
 ## Use
 
 ```js
-import errorGet from "error-get";
+import { errorGet } from "error-get";
 
 const errorInPromise = async (str = "promise") => {
   throw "error in " + str;
