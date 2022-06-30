@@ -1,5 +1,5 @@
 {
-  "name": "less-form",
+  "name": "error-get",
   "version": "1.1.0",
   "main": "cjs/index.js",
   "types": "lib/index.ts",
