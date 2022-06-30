@@ -1,18 +1,19 @@
-import errorGet from "../lib";
+import { describe, expect, it } from "vitest";
+import errorGet from ".";
 
 describe("simple error", () => {
-  test("simple promies fn", async () => {
+  it("simple promies fn", async () => {
     const errorInPromise = async () => {
-      throw "error in promise";
+      throw Error("error in promise");
     };
     const err = await errorGet(errorInPromise);
 
-    expect(err).toMatch(/error in promise/);
+    expect(err.message).toMatch(/error in promise/);
   });
 
-  test("simple promies obj", async () => {
+  it("simple promies obj", async () => {
     const errorInPromise = async () => {
-      throw "error in promise";
+      throw Error("error in promise");
     };
     const err = await errorGet(errorInPromise());
 

@@ -1,4 +1,4 @@
-const errorGet = async (
+export const errorGet = async (
   fn: Promise<any> | ((...args: any[]) => Promise<any>),
   args?: any[]
 ) => {
