@@ -1,7 +1,4 @@
-export const errorGet = async (
-  fn: Promise<any> | ((...args: any[]) => Promise<any>),
-  args?: any[]
-) => {
+export const errorGet = async (fn: any, args?: any[]) => {
   let res: any;
   try {
     if (typeof fn === "function") {

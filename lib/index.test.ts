@@ -28,4 +28,13 @@ describe("simple error", () => {
 
     expect(err).deep.eq({ dog: "aaa", age: 5 });
   });
+
+  it("simple no promies", async () => {
+    const errorInPromise = () => {
+      return { dog: "aaa", age: 5 };
+    };
+    const err = await errorGet(errorInPromise());
+
+    expect(err).deep.eq({ dog: "aaa", age: 5 });
+  });
 });
